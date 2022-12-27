@@ -4,18 +4,17 @@ import apiKeys from "./apiKeys";
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const [weather, setWeather] = useState({});
-  const getWeather = async (lat, lon) => {
+  const getWeather = async () => {
     const response = await fetch(
-      `${apiKeys.base}current.json?key=${apiKeys.key}&q=${lat},${lon}&aqi=no`
+      `http://api.weatherapi.com/v1/current.json?key=326cc5d6256e4eae995154922222712&q=51.5114223,-0.1165972&aqi=no
+      `
     );
-    const weather = await response.json();
-    return setWeather(weather);
+    const data = await response.json();
+    console.log(data);
   };
   useEffect(() => {
-    getLocation();
+    getWeather();
   }, []);
-
   return (
     <div>
       <h1>hello world</h1>
