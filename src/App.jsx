@@ -1,23 +1,36 @@
 import "./App.css";
-import { getLocation } from "./currentLocation";
-import apiKeys from "./apiKeys";
+
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const getWeather = async () => {
+  const [longitude, setLongitude] = useState();
+  const [latitude, setLatitude] = useState();
+  const [weather, setWeather] = useState({});
+  const getWeather = async (longitude, latitude) => {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/current.json?key=326cc5d6256e4eae995154922222712&q=51.5114223,-0.1165972&aqi=no
+      `http://api.weatherapi.com/v1/current.json?key=326cc5d6256e4eae995154922222712&q=${latitude},${longitude}&aqi=no
       `
     );
     const data = await response.json();
-    console.log(data);
+    setWeather(data);
+    console.log(weather);
   };
   useEffect(() => {
-    getWeather();
-  }, []);
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        setLatitude(position.coords.latitude);
+        setLongitude(position.coords.longitude);
+      });
+    } else {
+      alert("Sorry Not available!");
+    }
+
+    getWeather(longitude, latitude);
+  }, [latitude, longitude]);
   return (
     <div>
       <h1>hello world</h1>
+      <h1></h1>
     </div>
   );
 };
