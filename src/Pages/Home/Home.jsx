@@ -42,12 +42,17 @@ const Home = () => {
 
   return (
     <div>
-      <h1>{greeting}</h1>
-      <div>
-        <Clock format="HH" interval={1000} ticking={true} />
-      </div>
-      <div>
-        <Clock format="mm" interval={1000} ticking={true} />
+      <h1 className="greeting">{greeting}</h1>
+      <div className="clock-ctner">
+        {/* <div className="clock"> */}
+        <Clock format="HH" interval={1000} ticking={true} className="clock" />
+        {/* </div> */}
+        {/* <div className="clock"> */}
+        <Clock format="mm" interval={1000} ticking={true} className="clock" />
+        {/* </div> */}
+        {/* <div className="clock"> */}
+        <Clock format="ss" interval={1000} ticking={true} className="clock" />
+        {/* </div> */}
       </div>
       {!loading && !weather.error && (
         <h1>
