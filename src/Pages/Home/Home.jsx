@@ -1,10 +1,11 @@
 import "./Home.scss";
 import apiKeys from "../../apiKeys";
 import { useEffect, useState } from "react";
-
+import Clock from "react-live-clock";
 const Home = () => {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [greeting, setGreeting] = useState("Good Morning");
 
   const getWeather = async (latitude, longitude) => {
     const response =
@@ -16,17 +17,38 @@ const Home = () => {
     setLoading(false);
   };
 
+  const getGreeting = () => {
+    const d = new Date();
+    const time = d.getHours();
+    if (time > 12) {
+      setGreeting("Good Afternoon");
+    }
+    if (time > 18) {
+      setGreeting("Good Evening");
+    }
+    if (time > 21) {
+      setGreeting("Good Night");
+    }
+  };
+
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         getWeather(position.coords.latitude, position.coords.longitude);
       });
     }
+    getGreeting();
   }, []);
 
   return (
     <div>
-      <h1>hello world</h1>
+      <h1>{greeting}</h1>
+      <div>
+        <Clock format="HH" interval={1000} ticking={true} />
+      </div>
+      <div>
+        <Clock format="mm" interval={1000} ticking={true} />
+      </div>
       {!loading && !weather.error && (
         <h1>
           {weather.location.name} {weather.current.temp_c}°C{" "}
