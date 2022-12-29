@@ -16,6 +16,14 @@ const Home = () => {
     setWeather(data);
     console.log(data);
     setLoading(false);
+    const getNth = (arr, nth) => {
+      const threeHourArr = [];
+      for (let i = 0; i < arr.length; i += nth) {
+        threeHourArr.push(arr[i]);
+      }
+      return threeHourArr;
+    };
+    console.log(getNth(data.forecast.forecastday[0].hour, 3));
   };
 
   const getGreeting = () => {
