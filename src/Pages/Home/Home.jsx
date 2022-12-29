@@ -6,10 +6,11 @@ const Home = () => {
   const [weather, setWeather] = useState(null);
   const [loading, setLoading] = useState(true);
   const [greeting, setGreeting] = useState("Good Morning");
+  // const [threeHour, setThreeHour] = useState([]);
 
   const getWeather = async (latitude, longitude) => {
     const response =
-      await fetch(`${apiKeys.base}/current.json?key=${apiKeys.key}&q=${latitude},${longitude}&aqi=no
+      await fetch(`${apiKeys.base}/forecast.json?key=${apiKeys.key}&q=${latitude},${longitude}&days=7&aqi=no&alerts=no
     `);
     const data = await response.json();
     setWeather(data);
@@ -55,14 +56,27 @@ const Home = () => {
         {/* </div> */}
       </div>
       {!loading && !weather.error && (
-        <h1>
-          {weather.location.name} {weather.current.temp_c}°C{" "}
-          {weather.current.condition.text}
-          <img
-            src={weather.current.condition.icon}
-            alt={weather.current.condition.text}
-          />
-        </h1>
+        <>
+          <div className="current-weather">
+            <h1>{weather.current.temp_c}°C</h1>
+            <img
+              className="current-image"
+              src={weather.current.condition.icon}
+              alt={weather.current.condition.text}
+            />
+            <h2>{weather.current.condition.text}</h2>
+            <h2> {weather.location.name}</h2>
+          </div>
+          <div className="hourly-weather">
+            <h1>{weather.forecast.forecastday[0].hour[0].temp_c}°C</h1>
+            <img
+              className="current-image"
+              src={weather.forecast.forecastday[0].hour[0].condition.icon}
+              alt={weather.forecast.forecastday[0].hour[0].condition.text}
+            />
+            <h2>{weather.forecast.forecastday[0].hour[0].time.slice(10)}</h2>
+          </div>
+        </>
       )}
     </div>
   );
