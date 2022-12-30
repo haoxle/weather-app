@@ -30,8 +30,8 @@
   text-align: center;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.4);
-  height: 8rem;
-  width: 8rem;
+  height: 7rem;
+  width: 7rem;
   border-radius: 1rem;
   margin: 1rem;
   .hourly-temp {
@@ -42,8 +42,9 @@
   }
   .hourly-time {
     font-family: $font-main;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 0.1rem;
+    font-weight: 400;
     color: #fff;
   }
 }
