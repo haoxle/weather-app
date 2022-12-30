@@ -4,6 +4,7 @@
   background: transparent;
   width: 100%;
   padding: 2rem 0;
+  font-size: 3rem;
   text-align: center;
   color: #fff;
   font-family: $font-cursive;
@@ -40,10 +41,10 @@
 
 .threeHourWeather-ctner {
   display: flex;
-  padding: 2rem;
+  padding: 1rem 2rem;
   justify-content: space-around;
 }
 
 .dailyWeather-ctner {
-  padding: 2rem;
+  padding: 0rem 2rem;
 }
