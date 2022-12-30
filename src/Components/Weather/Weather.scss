@@ -48,3 +48,93 @@
     color: #fff;
   }
 }
+
+.daily-weather {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 3rem;
+  border-radius: 1rem;
+  margin: 1rem;
+
+  .daily-temp {
+    font-family: $font-text;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    width: 10rem;
+  }
+
+  .daily-text {
+    font-family: $font-text;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    margin-left: -2rem;
+    width: 15rem;
+  }
+  .daily-date {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 400;
+    color: #fff;
+    width: 10rem;
+    padding-left: 5rem;
+  }
+  .daily-img {
+    margin-left: -14rem;
+    margin-right: 5rem;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+.title-weather {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 1rem;
+  border-radius: 1rem;
+  margin: 1rem;
+
+  .daily-temp {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #fff;
+    width: 10rem;
+  }
+
+  .daily-text {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-left: -2rem;
+    width: 15rem;
+  }
+  .daily-date {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #fff;
+    width: 10rem;
+    padding-left: 5rem;
+  }
+  .daily-img {
+    margin-left: -14rem;
+    margin-right: 5rem;
+    height: 3rem;
+    width: 3rem;
+  }
+}
