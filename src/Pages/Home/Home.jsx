@@ -31,6 +31,8 @@ const Home = () => {
             image={weather.condition.icon}
             time={weather.time.slice(10)}
             weather={weather.condition.text}
+            tempClass={"hourly-temp"}
+            timeClass={"hourly-time"}
             ctnerClass={"hourly-weather"}
             key={i + "three hourly weather"}
           />
@@ -82,6 +84,9 @@ const Home = () => {
             text={weather.current.condition.text}
             locality={weather.location.name}
             ctnerClass={"current-weather"}
+            tempClass={"current-temp"}
+            textClass={"current-text"}
+            localClass={"current-local"}
           />
           <div className="threeHourWeather-ctner">{threeHour}</div>
         </>

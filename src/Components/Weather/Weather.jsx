@@ -8,14 +8,18 @@ const Weather = ({
   text,
   locality,
   ctnerClass,
+  tempClass,
+  timeClass,
+  textClass,
+  localClass,
 }) => {
   return (
     <div className={ctnerClass}>
-      <h1>{temperature} °C</h1>
+      <h1 className={tempClass}>{temperature} °C</h1>
       <img className="current-image" src={image} alt={weather} />
-      <h2>{time}</h2>
-      <h2>{text}</h2>
-      <h2>{locality}</h2>
+      <h2 className={timeClass}>{time}</h2>
+      <h2 className={textClass}>{text}</h2>
+      <h2 className={localClass}>{locality}</h2>
     </div>
   );
 };

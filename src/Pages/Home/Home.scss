@@ -28,17 +28,18 @@
     justify-content: center;
     align-items: center;
     background: transparent;
-    background-color: rgba(211, 211, 211, 0.4);
-    height: 8rem;
-    width: 8rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 7rem;
+    width: 7rem;
     border-radius: 1rem;
-    margin: 1rem;
+    margin: 0.7rem;
     font-size: 3rem;
   }
 }
 
 .threeHourWeather-ctner {
   display: flex;
-  padding: 3rem;
+  padding: 2rem;
   justify-content: space-around;
 }
