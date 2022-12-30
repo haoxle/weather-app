@@ -26,15 +26,14 @@ const Home = () => {
       }
       const mappedWeather = threeHourArr.map((weather, i) => {
         return (
-          <div key={i + "three hourly weather"}>
-            <Weather
-              temperature={weather.temp_c}
-              image={weather.condition.icon}
-              time={weather.time.slice(10)}
-              weather={weather.condition.text}
-              ctnerClass={"hourly-weather"}
-            />
-          </div>
+          <Weather
+            temperature={weather.temp_c}
+            image={weather.condition.icon}
+            time={weather.time.slice(10)}
+            weather={weather.condition.text}
+            ctnerClass={"hourly-weather"}
+            key={i + "three hourly weather"}
+          />
         );
       });
       setThreeHour(mappedWeather);
@@ -64,7 +63,7 @@ const Home = () => {
         getWeather(position.coords.latitude, position.coords.longitude);
       });
     }
-  }, []);
+  }, [greeting]);
 
   return (
     <div>
@@ -84,7 +83,7 @@ const Home = () => {
             locality={weather.location.name}
             ctnerClass={"current-weather"}
           />
-          {threeHour}
+          <div className="threeHourWeather-ctner">{threeHour}</div>
         </>
       )}
     </div>
