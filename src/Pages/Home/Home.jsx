@@ -1,21 +1,17 @@
-// import Forecast from "../Forecast/Forecast";
-// import "./Home.scss";
-// import Clock from "react-live-clock";
-// import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
+import "./Home.scss";
 
-// const Home = () => {
+const Home = () => {
+  return (
+    <div className="app-ctner">
+      <NavLink to="/forecast" className="app-forecast">
+        Forecast
+      </NavLink>
+      <NavLink to="/" className="app-list">
+        To-Do List
+      </NavLink>
+    </div>
+  );
+};
 
-//   return (
-//     <>
-//       <h1 className="greeting">{greeting}</h1>
-//       <div className="clock-ctner">
-//         <Clock format="HH" interval={1000} ticking={true} className="clock" />
-//         <Clock format="mm" interval={1000} ticking={true} className="clock" />
-//         <Clock format="ss" interval={1000} ticking={true} className="clock" />
-//       </div>
-//       <Forecast />;
-//     </>
-//   );
-// };
-
-// export default Home;
+export default Home;

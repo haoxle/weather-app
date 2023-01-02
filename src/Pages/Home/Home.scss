@@ -1,4 +1,4 @@
-// @use "../../Styles/_variables" as *;
+@use "../../Styles/_variables" as *;
 
 // .greeting {
 //   background: transparent;
@@ -38,3 +38,22 @@
 //     font-size: 3rem;
 //   }
 // }
+.app-ctner {
+  display: flex;
+  padding: 3rem;
+  justify-content: space-around;
+  color: white;
+  .app-forecast,
+  .app-list {
+    background: transparent;
+    height: 25em;
+    width: 25rem;
+    background-color: gray;
+    // padding: 3rem;
+    color: white;
+  }
+}
+
+a {
+  text-decoration: none;
+}

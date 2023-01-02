@@ -2,6 +2,7 @@ import "./Forecast.scss";
 import apiKeys from "../../apiKeys";
 import { useEffect, useState } from "react";
 import Weather from "../../Components/Weather/Weather";
+import { NavLink } from "react-router-dom";
 
 const Forecast = () => {
   const [weather, setWeather] = useState(null);
@@ -77,6 +78,9 @@ const Forecast = () => {
     <div>
       {!loading && !weather.error && (
         <>
+          <NavLink to="/" className="app-forecast">
+            Home
+          </NavLink>
           <Weather
             temperature={Math.round(weather.current.temp_c)}
             image={weather.current.condition.icon}
