@@ -19,19 +19,22 @@
   letter-spacing: 0.2rem;
 }
 .home:hover {
-  color: #fff;
+  color: $white;
 }
 
-.loader {
-  margin: auto;
-  border: 20px solid #eaf0f6;
-  border-radius: 50%;
-  border-top: 20px solid #ff7a59;
-  width: 200px;
-  height: 200px;
-  animation: spinner 4s linear infinite;
+.loader-ctner {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  .loader {
+    border: 1.5rem solid $offWhite;
+    border-radius: 50%;
+    border-top: 1.5rem solid $lightPurple;
+    width: 10rem;
+    height: 10rem;
+    animation: spinner 4s linear infinite;
+  }
 }
-
 @keyframes spinner {
   0% {
     transform: rotate(0deg);

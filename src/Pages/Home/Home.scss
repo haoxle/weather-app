@@ -42,7 +42,7 @@
   display: flex;
   padding: 3rem;
   justify-content: space-around;
-  color: white;
+  color: $white;
   .app-forecast,
   .app-list {
     display: flex;
@@ -54,7 +54,7 @@
     width: 25rem;
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 1rem;
-    color: white;
+    color: $white;
   }
   .app-forecast {
     background-image: url("../../assets/cloudy.png");

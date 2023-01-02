@@ -3,6 +3,7 @@ import apiKeys from "../../apiKeys";
 import { useEffect, useState } from "react";
 import Weather from "../../Components/Weather/Weather";
 import { NavLink } from "react-router-dom";
+import Form from "../../Components/Form/Form";
 
 const Forecast = () => {
   const [weather, setWeather] = useState(null);
@@ -113,7 +114,12 @@ const Forecast = () => {
           </div>
         </>
       )}
-      {loading && <div className="loader"></div>}
+      {loading && (
+        <div className="loader-ctner">
+          <div className="loader"></div>
+        </div>
+      )}
+      <Form />
     </div>
   );
 };

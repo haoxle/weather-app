@@ -21,19 +21,20 @@ p {
   padding: 2rem 0;
   font-size: 3rem;
   text-align: center;
-  color: #fff;
+  color: $white;
   font-family: $font-cursive;
   animation: greeting 1s ease-in-out infinite alternate;
 }
 @keyframes greeting {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px $white, 0 0 20px $white, 0 0 30px $purple,
+      0 0 40px $purple, 0 0 50px $purple, 0 0 60px $purple, 0 0 70px $purple;
   }
 
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px $white, 0 0 30px $lightPurple, 0 0 40px $lightPurple,
+      0 0 50px $lightPurple, 0 0 60px $lightPurple, 0 0 70px $lightPurple,
+      0 0 80px $lightPurple;
   }
 }
 .clock-ctner {
@@ -44,7 +45,7 @@ p {
     justify-content: center;
     align-items: center;
     background: transparent;
-    color: #fff;
+    color: $white;
     background-color: rgba(0, 0, 0, 0.4);
     height: 7rem;
     width: 7rem;

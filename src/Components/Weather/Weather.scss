@@ -38,14 +38,14 @@
     font-family: $font-text;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    color: #fff;
+    color: $white;
   }
   .hourly-time {
     font-family: $font-main;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     font-weight: 400;
-    color: #fff;
+    color: $white;
   }
 }
 
@@ -64,7 +64,7 @@
     font-family: $font-text;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    color: #fff;
+    color: $white;
     width: 10rem;
   }
 
@@ -72,7 +72,7 @@
     font-family: $font-text;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    color: #fff;
+    color: $white;
     margin-left: -2rem;
     width: 15rem;
   }
@@ -81,7 +81,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     font-weight: 400;
-    color: #fff;
+    color: $white;
     width: 10rem;
     padding-left: 5rem;
   }
@@ -109,7 +109,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    color: #fff;
+    color: $white;
     width: 10rem;
   }
 
@@ -118,7 +118,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    color: #fff;
+    color: $white;
     margin-left: -2rem;
     width: 15rem;
   }
@@ -127,7 +127,7 @@
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    color: #fff;
+    color: $white;
     width: 10rem;
     padding-left: 5rem;
   }
