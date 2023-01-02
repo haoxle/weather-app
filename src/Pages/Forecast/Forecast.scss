@@ -1,0 +1,11 @@
+@use "../../Styles/_variables" as *;
+
+.threeHourWeather-ctner {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-around;
+}
+
+.dailyWeather-ctner {
+  padding: 0rem 2rem;
+}

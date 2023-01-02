@@ -1,138 +1,21 @@
-import "./Home.scss";
-import apiKeys from "../../apiKeys";
-import { useEffect, useState } from "react";
-import Clock from "react-live-clock";
-import Weather from "../../Components/Weather/Weather";
+// import Forecast from "../Forecast/Forecast";
+// import "./Home.scss";
+// import Clock from "react-live-clock";
+// import { useEffect, useState } from "react";
 
-const Home = () => {
-  const [weather, setWeather] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [greeting, setGreeting] = useState("Good Morning");
-  const [threeHour, setThreeHour] = useState([]);
-  const [dailyWeather, setDailyWeather] = useState([]);
+// const Home = () => {
 
-  const getWeather = async (latitude, longitude) => {
-    const response =
-      await fetch(`${apiKeys.base}/forecast.json?key=${apiKeys.key}&q=${latitude},${longitude}&days=7&aqi=no&alerts=no
-    `);
-    const data = await response.json();
+//   return (
+//     <>
+//       <h1 className="greeting">{greeting}</h1>
+//       <div className="clock-ctner">
+//         <Clock format="HH" interval={1000} ticking={true} className="clock" />
+//         <Clock format="mm" interval={1000} ticking={true} className="clock" />
+//         <Clock format="ss" interval={1000} ticking={true} className="clock" />
+//       </div>
+//       <Forecast />;
+//     </>
+//   );
+// };
 
-    setWeather(data);
-    console.log(data);
-    setLoading(false);
-
-    const daily = data.forecast.forecastday.map((daily, i) => {
-      return (
-        <Weather
-          image={daily.day.condition.icon}
-          temperature={
-            Math.round(daily.day.mintemp_c) +
-            "°" +
-            "- " +
-            Math.round(daily.day.maxtemp_c)
-          }
-          uv={daily.day.uv}
-          humidity={daily.day.avghumidity}
-          locality={daily.day.condition.text}
-          date={daily.date.slice(8) + "/" + daily.date.slice(5, 7)}
-          localClass={"daily-text"}
-          tempClass={"daily-temp"}
-          key={i + "daily weather"}
-          dateClass={"daily-date"}
-          ctnerClass={"daily-weather"}
-          imgClass={"daily-img"}
-        />
-      );
-    });
-    setDailyWeather(daily);
-
-    const threeHourArr = [];
-    for (let i = 0; i < data.forecast.forecastday[0].hour.length; i += 3) {
-      threeHourArr.push(data.forecast.forecastday[0].hour[i]);
-    }
-    const mappedWeather = threeHourArr.map((weather, i) => {
-      return (
-        <Weather
-          temperature={Math.round(weather.temp_c)}
-          image={weather.condition.icon}
-          time={weather.time.slice(10)}
-          weather={weather.condition.text}
-          tempClass={"hourly-temp"}
-          timeClass={"hourly-time"}
-          ctnerClass={"hourly-weather"}
-          key={i + "three hourly weather"}
-        />
-      );
-    });
-    setThreeHour(mappedWeather);
-  };
-
-  const getGreeting = () => {
-    const d = new Date();
-    const time = d.getHours();
-    if (time > 12) {
-      setGreeting("Good Afternoon");
-    }
-    if (time > 18) {
-      setGreeting("Good Evening");
-    }
-    if (time > 21) {
-      setGreeting("Good Night");
-    }
-  };
-
-  useEffect(() => {
-    getGreeting();
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        getWeather(position.coords.latitude, position.coords.longitude);
-      });
-    }
-  }, [greeting]);
-
-  return (
-    <div>
-      <h1 className="greeting">{greeting}</h1>
-      <div className="clock-ctner">
-        <Clock format="HH" interval={1000} ticking={true} className="clock" />
-        <Clock format="mm" interval={1000} ticking={true} className="clock" />
-        <Clock format="ss" interval={1000} ticking={true} className="clock" />
-      </div>
-      {!loading && !weather.error && (
-        <>
-          <Weather
-            temperature={Math.round(weather.current.temp_c)}
-            image={weather.current.condition.icon}
-            weather={weather.current.condition.text}
-            text={weather.current.condition.text}
-            locality={weather.location.name}
-            ctnerClass={"current-weather"}
-            tempClass={"current-temp"}
-            textClass={"current-text"}
-            localClass={"current-local"}
-          />
-          <div className="threeHourWeather-ctner">{threeHour}</div>
-
-          <div className="dailyWeather-ctner">
-            <Weather
-              image={weather.current.condition.icon}
-              temperature="temp"
-              uv="UV"
-              humidity="Humidity"
-              locality="Weather"
-              date="Date"
-              localClass={"daily-text"}
-              tempClass={"daily-temp"}
-              dateClass={"daily-date"}
-              ctnerClass={"title-weather"}
-              imgClass={"daily-img"}
-            />{" "}
-            {dailyWeather}
-          </div>
-        </>
-      )}
-    </div>
-  );
-};
-
-export default Home;
+// export default Home;
