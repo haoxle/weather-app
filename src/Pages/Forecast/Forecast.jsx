@@ -76,11 +76,12 @@ const Forecast = () => {
 
   return (
     <div>
+      {" "}
+      <NavLink to="/" className="home">
+        Home
+      </NavLink>
       {!loading && !weather.error && (
         <>
-          <NavLink to="/" className="app-forecast">
-            Home
-          </NavLink>
           <Weather
             temperature={Math.round(weather.current.temp_c)}
             image={weather.current.condition.icon}
@@ -112,6 +113,7 @@ const Forecast = () => {
           </div>
         </>
       )}
+      {loading && <div className="loader"></div>}
     </div>
   );
 };
