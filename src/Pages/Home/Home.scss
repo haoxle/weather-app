@@ -45,15 +45,30 @@
   color: white;
   .app-forecast,
   .app-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: transparent;
-    height: 25em;
+    font-size: 3rem;
+    height: 25rem;
     width: 25rem;
-    background-color: gray;
-    // padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 1rem;
     color: white;
   }
+  .app-forecast {
+    background-image: url("../../assets/cloudy.png");
+    background-size: 20rem, 20rem, auto;
+    background-position: 2rem;
+    background-repeat: no-repeat;
+  }
+  .app-list {
+    background-image: url("../../assets/to-do-list.png");
+    background-size: 20rem, 20rem, auto;
+    background-position: 2rem;
+    background-repeat: no-repeat;
+  }
 }
-
 a {
   text-decoration: none;
 }
