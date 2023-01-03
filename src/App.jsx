@@ -34,7 +34,7 @@ const App = () => {
         <Clock format="ss" interval={1000} ticking={true} className="clock" />
       </div>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="weather-app/" element={<Home />} />
         <Route path="/forecast" element={<Forecast />} />
       </Routes>
     </Router>
