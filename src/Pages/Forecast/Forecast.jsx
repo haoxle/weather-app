@@ -19,7 +19,6 @@ const Forecast = () => {
     const data = await response.json();
 
     setWeather(data);
-    console.log(data);
     setLoading(false);
 
     const daily = data.forecast.forecastday.map((daily, i) => {
@@ -81,13 +80,11 @@ const Forecast = () => {
 
   const getLocatedWeather = async (e) => {
     e.preventDefault();
-    console.log(field);
     const response =
       await fetch(`${apiKeys.base}/forecast.json?key=${apiKeys.key}&q=${field}&days=7&aqi=no&alerts=no
       `);
     const data = await response.json();
     setWeather(data);
-    console.log(data);
     setLoading(false);
   };
 
