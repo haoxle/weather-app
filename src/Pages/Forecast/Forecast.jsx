@@ -14,7 +14,7 @@ const Forecast = () => {
 
   const getWeather = async (latitude, longitude) => {
     const response =
-      await fetch(`${apiKeys.base}/forecast.json?key=${apiKeys.key}&q=${latitude},${longitude}&days=7&aqi=no&alerts=no
+      await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKeys.key}&q=${latitude},${longitude}&days=7&aqi=no&alerts=no
       `);
     const data = await response.json();
 
@@ -81,7 +81,7 @@ const Forecast = () => {
   const getLocatedWeather = async (e) => {
     e.preventDefault();
     const response =
-      await fetch(`${apiKeys.base}/forecast.json?key=${apiKeys.key}&q=${field}&days=7&aqi=no&alerts=no
+      await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKeys.key}&q=${field}&days=7&aqi=no&alerts=no
       `);
     const data = await response.json();
     setWeather(data);
