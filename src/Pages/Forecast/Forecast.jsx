@@ -10,6 +10,7 @@ const Forecast = () => {
   const [loading, setLoading] = useState(true);
   const [threeHour, setThreeHour] = useState([]);
   const [dailyWeather, setDailyWeather] = useState([]);
+  const [field, setField] = useState("");
 
   const getWeather = async (latitude, longitude) => {
     const response =
@@ -73,8 +74,24 @@ const Forecast = () => {
         getWeather(position.coords.latitude, position.coords.longitude);
       });
     }
-  }, []);
+  }, [field]);
 
+  const getLocatedWeather = async (e) => {
+    e.preventDefault();
+    console.log(field);
+    const response =
+      await fetch(`${apiKeys.base}/forecast.json?key=${apiKeys.key}&q=${field}&days=7&aqi=no&alerts=no
+      `);
+    const data = await response.json();
+    setWeather(data);
+    console.log(data);
+    setLoading(false);
+  };
+
+  const locatedWeather = (e) => {
+    e.preventDefault();
+    setField(e.target.value);
+  };
   return (
     <div>
       {" "}
@@ -119,7 +136,7 @@ const Forecast = () => {
           <div className="loader"></div>
         </div>
       )}
-      <Form />
+      <Form handleChange={locatedWeather} handleSubmit={getLocatedWeather} />
     </div>
   );
 };

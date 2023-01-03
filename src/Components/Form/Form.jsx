@@ -1,20 +1,25 @@
 import "./Form.scss";
 
-const Form = () => {
+const Form = ({ value, handleChange, handleSubmit }) => {
   return (
-    <div className="form__group">
+    <form className="form__group">
       <input
         type="input"
         className="form__field"
         placeholder="Location"
         name="Location"
+        value={value}
+        onChange={handleChange}
         id="Location"
         required
       />
       <label for="name" className="form__label">
         Location
       </label>
-    </div>
+      <button className="form__button" onClick={handleSubmit}>
+        Submit
+      </button>
+    </form>
   );
 };
 

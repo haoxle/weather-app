@@ -1,10 +1,12 @@
 @use "../../Styles/_variables" as *;
 .form__group {
+  background: transparent;
+  display: flex;
   margin-left: 26rem;
   position: relative;
   padding: 15px 0 0;
   margin-top: 10px;
-  width: 50%;
+  width: 45%;
 }
 
 .form__field {
@@ -61,4 +63,23 @@
   &:invalid {
     box-shadow: none;
   }
+}
+
+.form__button {
+  background: transparent;
+  border: 0;
+  border-bottom: 0.2rem solid $lightPurple;
+  padding: 0.5rem;
+  color: $white;
+  font-size: 0.7rem;
+  width: 5rem;
+}
+
+.form__button:hover {
+  background: transparent;
+  border: 0.2rem solid $lightPurple;
+  padding: 0.5rem;
+  color: $lightPurple;
+  font-size: 1rem;
+  width: 5rem;
 }
