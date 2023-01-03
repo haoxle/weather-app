@@ -4,10 +4,10 @@ import "./Home.scss";
 const Home = () => {
   return (
     <div className="app-ctner">
-      <NavLink to="/forecast" className="app-forecast">
+      <NavLink to="weather-app/forecast" className="app-forecast">
         Forecast
       </NavLink>
-      <NavLink to="/" className="app-list">
+      <NavLink to="weather-app/" className="app-list">
         To-Do List
       </NavLink>
     </div>
