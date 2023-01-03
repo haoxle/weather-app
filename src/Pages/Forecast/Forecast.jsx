@@ -56,6 +56,7 @@ const Forecast = () => {
         <Weather
           temperature={Math.round(weather.temp_c)}
           image={weather.condition.icon}
+          imgClass={"hourly-img"}
           time={weather.time.slice(10)}
           weather={weather.condition.text}
           tempClass={"hourly-temp"}

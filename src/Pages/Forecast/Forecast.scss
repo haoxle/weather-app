@@ -43,3 +43,32 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  .threeHourWeather-ctner {
+    overflow-x: scroll;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    width: 90%;
+    margin: 0 1rem 0 1rem;
+    padding: 0;
+    justify-content: space-around;
+  }
+
+  .dailyWeather-ctner {
+    padding: 0rem 2rem;
+  }
+  .home {
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    color: black;
+    font-family: $font-cursive;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+  }
+  .home:hover {
+    color: $white;
+  }
+}

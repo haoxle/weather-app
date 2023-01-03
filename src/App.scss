@@ -54,3 +54,33 @@ p {
     font-size: 3rem;
   }
 }
+
+@media screen and (min-width: 0px) and (max-width: 700px) {
+  .greeting {
+    background: transparent;
+    width: 100%;
+    padding: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+    color: $white;
+    font-family: $font-cursive;
+    animation: greeting 1s ease-in-out infinite alternate;
+  }
+  .clock-ctner {
+    display: flex;
+    justify-content: center;
+    .clock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: transparent;
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.4);
+      height: 5rem;
+      width: 5rem;
+      border-radius: 1rem;
+      margin: 0.7rem;
+      font-size: 2rem;
+    }
+  }
+}
