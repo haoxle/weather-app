@@ -17,12 +17,14 @@ const Weather = ({
   uv,
   humidity,
   imgClass,
+  uvClass,
+  humidityClass,
 }) => {
   return (
     <div className={ctnerClass}>
       <h1 className={tempClass}>{temperature}°</h1>
-      <h2 className={tempClass}>{uv}</h2>
-      <h2 className={tempClass}>{humidity}</h2>{" "}
+      <h2 className={uvClass}>{uv}</h2>
+      <h2 className={humidityClass}>{humidity}</h2>{" "}
       <img className={imgClass} src={image} alt={weather} />{" "}
       <h2 className={textClass}>{text}</h2>
       <h2 className={timeClass}>{time}</h2>{" "}

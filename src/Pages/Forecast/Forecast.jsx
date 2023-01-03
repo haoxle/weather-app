@@ -42,6 +42,8 @@ const Forecast = () => {
           dateClass={"daily-date"}
           ctnerClass={"daily-weather"}
           imgClass={"daily-img"}
+          uvClass={"daily-uv"}
+          humidityClass={"daily-humidity"}
         />
       );
     });
@@ -127,6 +129,8 @@ const Forecast = () => {
               dateClass={"daily-date"}
               ctnerClass={"title-weather"}
               imgClass={"daily-img"}
+              uvClass={"daily-uv"}
+              humidityClass={"daily-humidity"}
             />{" "}
             {dailyWeather}
           </div>

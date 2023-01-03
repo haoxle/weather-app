@@ -44,7 +44,7 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 700px) {
+@media screen and (min-width: 0px) and (max-width: 760px) {
   .threeHourWeather-ctner {
     overflow-x: scroll;
     display: flex;
@@ -59,16 +59,21 @@
   .dailyWeather-ctner {
     padding: 0rem 2rem;
   }
-  .home {
+}
+
+@media screen and (min-width: 761px) and (max-width: 1500px) {
+  .threeHourWeather-ctner {
+    overflow-x: scroll;
     display: flex;
     justify-content: center;
-    background: transparent;
-    color: black;
-    font-family: $font-cursive;
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
+    white-space: nowrap;
+    width: 98%;
+    margin: 0 1rem 0 1rem;
+    padding: 0;
+    justify-content: space-around;
   }
-  .home:hover {
-    color: $white;
+
+  .dailyWeather-ctner {
+    padding: 0rem 1rem;
   }
 }

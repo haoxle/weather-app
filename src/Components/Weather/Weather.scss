@@ -67,7 +67,20 @@
     color: $white;
     width: 10rem;
   }
-
+  .daily-uv {
+    font-family: $font-text;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: $white;
+    width: 10rem;
+  }
+  .daily-humidity {
+    font-family: $font-text;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: $white;
+    width: 10rem;
+  }
   .daily-text {
     font-family: $font-text;
     font-size: 1.5rem;
@@ -103,7 +116,22 @@
   height: 1rem;
   border-radius: 1rem;
   margin: 1rem;
-
+  .daily-uv {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: $white;
+    width: 10rem;
+  }
+  .daily-humidity {
+    font-family: $font-main;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: $white;
+    width: 10rem;
+  }
   .daily-temp {
     font-family: $font-main;
     font-size: 1.2rem;
@@ -220,6 +248,12 @@
       width: 3rem;
       margin-left: 5rem;
     }
+    .daily-uv {
+      font-size: 1rem;
+    }
+    .daily-humidity {
+      font-size: 1rem;
+    }
   }
 
   .title-weather {
@@ -234,7 +268,12 @@
       font-size: 1rem;
       letter-spacing: 0.1rem;
     }
-
+    .daily-uv {
+      font-size: 1rem;
+    }
+    .daily-humidity {
+      font-size: 1rem;
+    }
     .daily-text {
       font-size: 1rem;
       letter-spacing: 0.1rem;
@@ -250,6 +289,134 @@
       height: 3rem;
       width: 3rem;
       margin-left: 5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 761px) and (max-width: 1500px) {
+  .daily-weather {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 2rem;
+    border-radius: 1rem;
+    margin: 1rem;
+
+    .daily-temp {
+      font-family: $font-text;
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      width: 5rem;
+      margin: 1rem;
+    }
+    .daily-uv {
+      font-family: $font-text;
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      width: 0rem;
+      margin: 0 0 0 0rem;
+
+      padding: 0;
+    }
+    .daily-humidity {
+      font-family: $font-text;
+      font-size: 1.5rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      width: 0rem;
+      margin: 0rem;
+    }
+
+    .daily-text {
+      font-family: $font-text;
+      font-size: 1.1rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      margin-left: 0rem;
+      width: 5rem;
+    }
+    .daily-date {
+      font-family: $font-main;
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+      color: $white;
+      width: 1rem;
+      padding-left: 1rem;
+    }
+    .daily-img {
+      margin-left: -18rem;
+      margin-right: 0rem;
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+
+  .title-weather {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 1rem 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    height: 1rem;
+    border-radius: 1rem;
+    margin: 1rem;
+
+    .daily-temp {
+      font-family: $font-main;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      width: 5rem;
+      margin: 1rem;
+    }
+    .daily-uv {
+      font-family: $font-main;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      width: 0rem;
+      margin: 0 0 0 0rem;
+
+      padding: 0;
+    }
+    .daily-humidity {
+      font-family: $font-main;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      width: 0rem;
+      margin: 0rem;
+    }
+
+    .daily-text {
+      font-family: $font-main;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      color: $white;
+      margin-left: 0rem;
+      width: 5rem;
+    }
+    .daily-date {
+      font-family: $font-main;
+      font-size: 1rem;
+      letter-spacing: 0.1rem;
+      font-weight: 600;
+      color: $white;
+      width: 1rem;
+      padding-left: 1rem;
+    }
+    .daily-img {
+      margin-left: -18rem;
+      margin-right: 0rem;
+      height: 3rem;
+      width: 3rem;
     }
   }
 }
