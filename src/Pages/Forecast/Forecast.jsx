@@ -95,7 +95,7 @@ const Forecast = () => {
   return (
     <div>
       {" "}
-      <NavLink to="/" className="home">
+      <NavLink to="/weather-app/" className="home">
         Home
       </NavLink>
       {!loading && !weather.error && (
