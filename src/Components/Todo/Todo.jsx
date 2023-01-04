@@ -1,3 +1,4 @@
+import "./Todo.scss";
 import React, { useState } from "react";
 import { RiCloseCircleLine } from "react-icons/ri";
 import { TiEdit } from "react-icons/ti";
@@ -14,7 +15,7 @@ const Todo = ({ todos, completeTodo, removeTodo, updateTodo }) => {
     return <TodoForm edit={edit} onSubmit={submitUpdate} />;
   }
   return todos.map((todo, i) => (
-    <div className={todo.iscomplete ? "todo-row complete" : "todo-row"} key={i}>
+    <div className={todo.isComplete ? "todo-row complete" : "todo-row"} key={i}>
       <div key={todo.id} onClick={() => completeTodo(todo.id)}>
         {todo.text}
       </div>

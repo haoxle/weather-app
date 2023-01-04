@@ -5,14 +5,32 @@
   background: transparent;
   display: flex;
   justify-content: center;
-  .todo-input {
+  .todo-update {
     background: transparent;
-    height: 3rem;
-    width: 15rem;
+    background-color: $lightPurple;
+    outline: 0.1rem solid black;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    height: 0;
+    width: 40rem;
   }
   .todo-button {
     background: transparent;
     margin-left: 1rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: $white;
     height: 3rem;
+    padding: 1rem;
+  }
+  .todo-input {
+    background: transparent;
+    background-color: $offWhite;
+    outline: 0.1rem solid black;
+    border: none;
+    border-radius: 0.5rem;
+    height: 3rem;
+    width: 15rem;
   }
 }

@@ -1,0 +1,27 @@
+@use "../../Styles/_variables" as *;
+.todo-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  padding: 1.5rem;
+  height: 0;
+  width: 40rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: $lightPurple;
+}
+.icons {
+  background: transparent;
+  .delete-icon,
+  .edit-icon {
+    background: transparent;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}

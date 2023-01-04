@@ -40,10 +40,10 @@ const TodoList = () => {
 
   return (
     <div>
-      <TodoForm onSubmit={addToDo} />
+      <TodoForm onSubmit={addToDo} placeholder="" />
       <Todo
         todos={todos}
-        completeTodos={completeTodo}
+        completeTodo={completeTodo}
         removeTodo={removeTodo}
         updateTodo={updateTodo}
       />
