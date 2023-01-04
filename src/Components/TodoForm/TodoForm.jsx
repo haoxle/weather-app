@@ -1,9 +1,14 @@
+import "./ToDoForm.scss";
 import React, { useState, useEffect, useRef } from "react";
 
 const TodoForm = (props) => {
   const [input, setInput] = useState("");
 
-  // const inputRef =
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  });
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -23,6 +28,7 @@ const TodoForm = (props) => {
         name="text"
         className="todo-input"
         onChange={handleFormChange}
+        ref={inputRef}
       />
       <button className="todo-button">add todo</button>
     </form>

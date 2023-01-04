@@ -1,0 +1,18 @@
+@use "../../Styles/_variables" as *;
+
+.todo-form {
+  margin: 2rem;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  .todo-input {
+    background: transparent;
+    height: 3rem;
+    width: 15rem;
+  }
+  .todo-button {
+    background: transparent;
+    margin-left: 1rem;
+    height: 3rem;
+  }
+}
