@@ -7,7 +7,7 @@ const Home = () => {
       <NavLink to="/forecast" className="app-forecast">
         Forecast
       </NavLink>
-      <NavLink to="/" className="app-list">
+      <NavLink to="/todo" className="app-list">
         To-Do List
       </NavLink>
     </div>

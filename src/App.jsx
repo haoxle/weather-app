@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
 import Forecast from "./Pages/Forecast/Forecast";
+import TodoList from "./Pages/TodoList/TodoList";
 const App = () => {
   const [greeting, setGreeting] = useState("Good Morning");
   const getGreeting = () => {
@@ -36,6 +37,7 @@ const App = () => {
       <Routes>
         <Route path="weather-app/" element={<Home />} />
         <Route path="/forecast" element={<Forecast />} />
+        <Route path="/todo" element={<TodoList />} />
       </Routes>
     </Router>
   );
