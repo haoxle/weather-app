@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Todo from "../../Components/Todo/Todo";
 import TodoForm from "../../Components/TodoForm/TodoForm";
+import { NavLink } from "react-router-dom";
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
@@ -40,6 +41,9 @@ const TodoList = () => {
 
   return (
     <div>
+      <div className="home">
+        <NavLink to="/weather-app/">Home</NavLink>
+      </div>
       <TodoForm onSubmit={addToDo} placeholder="" />
       <Todo
         todos={todos}
