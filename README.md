@@ -8,7 +8,6 @@ In the project directory, you can run:
 
 ### `npm install`
 
-Ensure that in apiUtils, the local host is coherent with java.
 
 ### `npm run start`
 
