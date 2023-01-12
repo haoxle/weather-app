@@ -38,7 +38,6 @@ const App = () => {
         <Route path="weather-app/" element={<Home />} />
         <Route path="/forecast" element={<Forecast />} />
         <Route path="/todo" element={<TodoList />} />
-        <h1></h1>
       </Routes>
     </Router>
   );
